@@ -1,0 +1,81 @@
+---
+title       : Analysis of Salaries of Professors
+subtitle    : 2008-09 Faculty Salary Survey from Salaries {car}
+author      : K White
+job         : Coursera/Johns Hopkins Data Science Specialization Student
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## Data Background
+
+* The data source collected nine-month academic salaries for three faculty levels at a US college in 2008-09 as part of an on-going monitoring program run by the college administration to follow salary differences between male and female faculty members  
+  
+* The data had 397 observations tracking faculty rank, departmental discipline type, years since PhD received, years of service, gender, and salary
+
+* This application invites exploratory data discovery by breaking out three elements of the faculty salaries: faculty rank, gender, and departmental discipline type
+
+* All three breakdowns have a point plot comparing the categories within the variables color coded for Gender; an optional trend line can be displayed as can a rug frequency gauge on each axis
+
+* Additionally, summary statistics are calculated for each breakdown, providing the category's salary mean, median, maximum and minimum values
+
+--- 
+
+## Data Adjustments
+
+The data was adjusted from its raw format by renaming relevant columns to improve presentation quality and replacing abbreviated values in columns with longer or descriptive values. No other adjustments were performed on the data set.
+
+
+```
+##                  Rank                    Discipline yrs.since.phd
+## 1           Professor Applied Discipline Department            19
+## 2           Professor Applied Discipline Department            20
+## 3 Assistant Professor Applied Discipline Department             4
+## 4           Professor Applied Discipline Department            45
+## 5           Professor Applied Discipline Department            40
+## 6 Associate Professor Applied Discipline Department             6
+##   yrs.service Gender Salary
+## 1          18   Male 139750
+## 2          16   Male 173200
+## 3           3   Male  79750
+## 4          39   Male 115000
+## 5          41   Male 141500
+## 6           6   Male  97000
+```
+
+---
+
+## Data Summary Exploration
+
+```
+##      Rank            Discipline        yrs.since.phd    yrs.service   
+##  Length:397         Length:397         Min.   : 1.00   Min.   : 0.00  
+##  Class :character   Class :character   1st Qu.:12.00   1st Qu.: 7.00  
+##  Mode  :character   Mode  :character   Median :21.00   Median :16.00  
+##                                        Mean   :22.31   Mean   :17.61  
+##                                        3rd Qu.:32.00   3rd Qu.:27.00  
+##                                        Max.   :56.00   Max.   :60.00  
+##     Gender        Salary      
+##  Female: 39   Min.   : 57800  
+##  Male  :358   1st Qu.: 91000  
+##               Median :107300  
+##               Mean   :113706  
+##               3rd Qu.:134185  
+##               Max.   :231545
+```
+
+---
+
+## Areas for Further Exploration
+
+The trendline and statistics tables provide intriguing insights that may warrant further inquiry:
+* There are far fewer females employed than males
+* The max tenure of females is only slightly over half that of males
+* On average, females trail male counterparts in salary by $15,000 but have a higher minimum salary by about $5,000
+* Applied disciplinary departments have a better compensation expectation than theoretical disciplinary departments after 20 years of service
+
+

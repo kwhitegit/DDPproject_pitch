@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Analysis of Salaries of Professors</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Analysis of Salaries of Professors">
+  <meta name="author" content="K White">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Analysis of Salaries of Professors</h1>
+    <h2>2008-09 Faculty Salary Survey from Salaries {car}</h2>
+    <p>K White<br/>Coursera/Johns Hopkins Data Science Specialization Student</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Data Background</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>The data source collected nine-month academic salaries for three faculty levels at a US college in 2008-09 as part of an on-going monitoring program run by the college administration to follow salary differences between male and female faculty members  </p></li>
+<li><p>The data had 397 observations tracking faculty rank, departmental discipline type, years since PhD received, years of service, gender, and salary</p></li>
+<li><p>This application invites exploratory data discovery by breaking out three elements of the faculty salaries: faculty rank, gender, and departmental discipline type</p></li>
+<li><p>All three breakdowns have a point plot comparing the categories within the variables color coded for Gender; an optional trend line can be displayed as can a rug frequency gauge on each axis</p></li>
+<li><p>Additionally, summary statistics are calculated for each breakdown, providing the category&#39;s salary mean, median, maximum and minimum values</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Data Adjustments</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The data was adjusted from its raw format by renaming relevant columns to improve presentation quality and replacing abbreviated values in columns with longer or descriptive values. No other adjustments were performed on the data set.</p>
+
+<pre><code>##                  Rank                    Discipline yrs.since.phd
+## 1           Professor Applied Discipline Department            19
+## 2           Professor Applied Discipline Department            20
+## 3 Assistant Professor Applied Discipline Department             4
+## 4           Professor Applied Discipline Department            45
+## 5           Professor Applied Discipline Department            40
+## 6 Associate Professor Applied Discipline Department             6
+##   yrs.service Gender Salary
+## 1          18   Male 139750
+## 2          16   Male 173200
+## 3           3   Male  79750
+## 4          39   Male 115000
+## 5          41   Male 141500
+## 6           6   Male  97000
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Data Summary Exploration</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code>##      Rank            Discipline        yrs.since.phd    yrs.service   
+##  Length:397         Length:397         Min.   : 1.00   Min.   : 0.00  
+##  Class :character   Class :character   1st Qu.:12.00   1st Qu.: 7.00  
+##  Mode  :character   Mode  :character   Median :21.00   Median :16.00  
+##                                        Mean   :22.31   Mean   :17.61  
+##                                        3rd Qu.:32.00   3rd Qu.:27.00  
+##                                        Max.   :56.00   Max.   :60.00  
+##     Gender        Salary      
+##  Female: 39   Min.   : 57800  
+##  Male  :358   1st Qu.: 91000  
+##               Median :107300  
+##               Mean   :113706  
+##               3rd Qu.:134185  
+##               Max.   :231545
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Areas for Further Exploration</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The trendline and statistics tables provide intriguing insights that may warrant further inquiry:</p>
+
+<ul>
+<li>There are far fewer females employed than males</li>
+<li>The max tenure of females is only slightly over half that of males</li>
+<li>On average, females trail male counterparts in salary by $15,000 but have a higher minimum salary by about $5,000</li>
+<li>Applied disciplinary departments have a better compensation expectation than theoretical disciplinary departments after 20 years of service</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Data Background'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Data Adjustments'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Data Summary Exploration'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Areas for Further Exploration'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
