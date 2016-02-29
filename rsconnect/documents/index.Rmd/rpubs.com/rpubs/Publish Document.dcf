@@ -1,0 +1,7 @@
+name: Publish Document
+account: rpubs
+server: rpubs.com
+appId: https://api.rpubs.com/api/v1/document/157192/c3326b9e44644a58bfa3debdef0896bb
+bundleId: https://api.rpubs.com/api/v1/document/157192/c3326b9e44644a58bfa3debdef0896bb
+url: http://rpubs.com/kwhiterpubs/157192
+when: 1456723433.64892
